@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farmer AI</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🌾 Smart Farmer</h2>
+                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">🌙</button>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Crop Categories</h3>
+                <ul class="category-list">
+                    <li>Kharif Crops</li>
+                    <li>Rabi Crops</li>
+                    <li>Zaid Crops</li>
+                    <li>Cash Crops</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Language</h3>
+                <select class="language-selector">
+                    <option value="en">English</option>
+                    <option value="hi">हिन्दी (Hindi)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                </select>
+            </div>
+
+            <div class="sidebar-section daily-tips">
+                <h3>Daily Tip 💡</h3>
+                <p>Rotate crops with legumes to naturally fix soil nitrogen levels.</p>
+            </div>
+            
+            <div class="sidebar-section recent-chats">
+                <h3>Recent Chats</h3>
+                <ul id="history-list">
+                    <li>Wheat fertilizer needs</li>
+                    <li>Pest control for cotton</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Hero Section -->
+            <section class="hero" id="hero-section">
+                <div class="hero-content">
+                    <h1>Your Personal Agriculture Assistant</h1>
+                    <p>Expert advice on crops, soil, pests, and more. Empowering Indian farmers with smart AI.</p>
+                    <button class="btn-primary" id="start-asking-btn">Start Asking</button>
+                </div>
+            </section>
+
+            <!-- Dashboard Cards -->
+            <section class="dashboard-cards">
+                <div class="card" onclick="suggestQuestion('What are the best crops to plant in summer?')">
+                    <div class="card-icon">🌱</div>
+                    <h3>Crop Advice</h3>
+                    <p>Seasonal planning & selection</p>
+                </div>
+                <div class="card" onclick="suggestQuestion('How do I control aphids on my tomato plants?')">
+                    <div class="card-icon">🐛</div>
+                    <h3>Pest Control</h3>
+                    <p>Safe and effective solutions</p>
+                </div>
+                <div class="card" onclick="suggestQuestion('What is the NPK ratio for rice cultivation?')">
+                    <div class="card-icon">🧪</div>
+                    <h3>Fertilizer Tips</h3>
+                    <p>Soil health & nutrient management</p>
+                </div>
+                <div class="card weather-card">
+                    <div class="card-icon">🌦️</div>
+                    <h3>Weather Alerts</h3>
+                    <p>28°C - Partly Cloudy</p>
+                </div>
+            </section>
+
+            <!-- Chatbot Interface -->
+            <section class="chat-section" id="chat-section">
+                <div class="chat-window">
+                    <div class="chat-history" id="chat-history">
+                        <div class="message ai-message">
+                            <div class="bubble">
+                                Hello! I am Smart Farmer AI. How can I assist with your farming today?
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-wrapper">
+                        <div class="suggested-chips">
+                            <span class="chip">Organic farming schemes</span>
+                            <span class="chip">Drip irrigation setup</span>
+                            <span class="chip">Soil testing guide</span>
+                        </div>
+                        <form id="chat-form">
+                            <button type="button" class="icon-btn voice-btn" title="Voice Input">🎤</button>
+                            <input type="text" id="user-input" placeholder="Type your farming question here..." autocomplete="off">
+                            <button type="submit" class="send-btn" title="Send">➔</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="footer-content">
+                    <div class="about">
+                        <h4>About Smart Farmer</h4>
+                        <p>Built for the modern Indian farmer, providing AI-driven insights for better yields.</p>
+                    </div>
+                    <div class="contact">
+                        <h4>Contact</h4>
+                        <p>support@smartfarmer.ai</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>"Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth."</p>
+                    <div class="social-icons">
+                        <span title="Mobile App">📱</span> 
+                        <span title="Website">🌐</span> 
+                        <span title="Email">✉️</span>
+                    </div>
+                </div>
+            </footer>
+            
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

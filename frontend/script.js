@@ -1,3 +1,12 @@
+// API Endpoint Configuration
+const getApiUrl = () => {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return 'http://127.0.0.1:5000/chat';
+    }
+    // Replace with your actual deployed Render/Railway backend service URL
+    return 'https://smart-farmer-backend.onrender.com/chat';
+};
+
 const chatHistory = document.getElementById('chat-history');
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
@@ -94,7 +103,7 @@ chatForm.addEventListener('submit', async (e) => {
 
     try {
         // 3. Call backend API
-        const response = await fetch('http://127.0.0.1:5000/chat', {
+        const response = await fetch(getApiUrl(), {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

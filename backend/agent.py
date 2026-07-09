@@ -3,7 +3,6 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv()
 
 def get_ai_response(user_message, language="en"):
@@ -13,7 +12,6 @@ def get_ai_response(user_message, language="en"):
         return "Error: GEMINI_API_KEY not found."
 
     try:
-        # Initialize the client using the new SDK
         client = genai.Client(api_key=api_key)
 
         system_prompt = (
@@ -22,17 +20,31 @@ def get_ai_response(user_message, language="en"):
             f"You MUST respond ONLY in the language code: '{language}'."
         )
 
-        # Using gemini-2.5-flash which has a generous free tier limit
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=user_message,
-            config=types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                temperature=0.7
-            )
-        )
-
-        return response.text
+        models_to_try = [
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite",
+            "gemini-flash-latest",
+            "gemini-flash-lite-latest"
+        ]
+        last_error = None
+        
+        for model_name in models_to_try:
+            try:
+                response = client.models.generate_content(
+                    model=model_name,
+                    contents=user_message,
+                    config=types.GenerateContentConfig(
+                        system_instruction=system_prompt,
+                        temperature=0.7
+                    )
+                )
+                return response.text
+            except Exception as e:
+                print(f"Model {model_name} failed: {str(e)}")
+                last_error = e
+                
+        # If all models fail, raise the last exception
+        raise last_error
 
     except Exception as e:
         print("Gemini Error:", str(e))

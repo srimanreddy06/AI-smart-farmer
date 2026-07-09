@@ -69,5 +69,19 @@ For a better experience (to avoid strict local file cors policies), you can use 
 - Type in your own queries about crop rotation, fertilizers, or pest control.
 - Toggle dark mode using the 🌙 icon in the sidebar.
 
+## Deployment
+
+The application is structured for easy deployment to cloud services:
+
+### 1. Backend Deployment (Render / Railway)
+- **Start Command**: `gunicorn app:app` (defined in the `Procfile`).
+- **Environment Variables**: Add `GEMINI_API_KEY` to your service environment variables in the provider's dashboard.
+- **Root Directory**: `backend` (if deploying from a monorepo).
+
+### 2. Frontend Deployment (Vercel / Netlify / Render Static)
+- **Root/Publish Directory**: `frontend`.
+- **Build Command**: None (pure static site).
+- **API Configuration**: Update the deployed backend URL inside the `getApiUrl` function in [script.js](file:///c:/Users/srima/ai%20smart%20chatbot/frontend/script.js) to point to your live backend endpoint.
+
 ## Screenshots
 *(Add screenshots of the Light and Dark modes here)*

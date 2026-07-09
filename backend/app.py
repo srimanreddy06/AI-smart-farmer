@@ -5,7 +5,6 @@ from agent import get_ai_response
 
 app = Flask(__name__)
 
-# Enable CORS for all domains so frontend can hit the API
 CORS(app)
 
 @app.route('/', methods=['GET'])
@@ -27,11 +26,10 @@ def chat():
     
     language = data.get('language', 'en')
     
-    # Get response from AI (Gemini)
     reply = get_ai_response(user_input, language)
     
     return jsonify({'reply': reply}), 200
 
 if __name__ == '__main__':
-    # Starts the local development server at port 5000
-    app.run(port=5000, debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, debug=True)

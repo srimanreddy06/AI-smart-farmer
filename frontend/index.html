@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farmer AI</title>
+    <!-- Inline SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌾</text></svg>">
     <!-- Modern Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="light-mode">
     <div class="app-container">
         
+        <!-- Sidebar Overlay for mobile drawer -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        
         <!-- Sidebar -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <h2>🌾 Smart Farmer</h2>
-                <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">🌙</button>
+                <h2 class="sidebar-title"><i data-lucide="wheat" class="sidebar-logo-icon"></i> Smart Farmer</h2>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode">
+                        <i data-lucide="moon" id="theme-icon"></i>
+                    </button>
+                    <button id="sidebar-close-btn" class="icon-btn mobile-only-btn" title="Close Menu">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
             </div>
             
             <div class="sidebar-section">
@@ -30,16 +44,16 @@
             
             <div class="sidebar-section">
                 <h3>Language</h3>
-                <select class="language-selector">
-                    <option value="en">English</option>
-                    <option value="hi">हिन्दी (Hindi)</option>
-                    <option value="te">తెలుగు (Telugu)</option>
-                    <option value="ta">தமிழ் (Tamil)</option>
-                </select>
+                <div class="language-grid" id="language-grid">
+                    <button class="lang-btn active" data-lang="en">🇺🇸 EN</button>
+                    <button class="lang-btn" data-lang="hi">🇮🇳 HI</button>
+                    <button class="lang-btn" data-lang="te">🇮🇳 TE</button>
+                    <button class="lang-btn" data-lang="ta">🇮🇳 TA</button>
+                </div>
             </div>
 
             <div class="sidebar-section daily-tips">
-                <h3>Daily Tip 💡</h3>
+                <h3><i data-lucide="lightbulb" class="tip-icon"></i> Daily Tip</h3>
                 <p>Rotate crops with legumes to naturally fix soil nitrogen levels.</p>
             </div>
             
@@ -53,7 +67,15 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="main-content">
+        <main class="main-content" id="main-content">
+            
+            <!-- Mobile Header Navigation -->
+            <header class="mobile-navbar">
+                <button id="sidebar-toggle-btn" class="icon-btn" title="Open Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+                <span class="mobile-brand">🌾 Smart Farmer AI</span>
+            </header>
             
             <!-- Hero Section -->
             <section class="hero" id="hero-section">
@@ -67,24 +89,26 @@
             <!-- Dashboard Cards -->
             <section class="dashboard-cards">
                 <div class="card" onclick="suggestQuestion('What are the best crops to plant in summer?')">
-                    <div class="card-icon">🌱</div>
+                    <div class="card-icon"><i data-lucide="sprout" class="card-icon-lucide"></i></div>
                     <h3>Crop Advice</h3>
                     <p>Seasonal planning & selection</p>
                 </div>
                 <div class="card" onclick="suggestQuestion('How do I control aphids on my tomato plants?')">
-                    <div class="card-icon">🐛</div>
+                    <div class="card-icon"><i data-lucide="bug" class="card-icon-lucide"></i></div>
                     <h3>Pest Control</h3>
                     <p>Safe and effective solutions</p>
                 </div>
                 <div class="card" onclick="suggestQuestion('What is the NPK ratio for rice cultivation?')">
-                    <div class="card-icon">🧪</div>
+                    <div class="card-icon"><i data-lucide="flask-conical" class="card-icon-lucide"></i></div>
                     <h3>Fertilizer Tips</h3>
                     <p>Soil health & nutrient management</p>
                 </div>
-                <div class="card weather-card">
-                    <div class="card-icon">🌦️</div>
-                    <h3>Weather Alerts</h3>
-                    <p>28°C - Partly Cloudy</p>
+                <div class="card weather-card skeleton" id="weather-card">
+                    <!-- Skeleton Loader initially -->
+                    <div class="skeleton-shimmer"></div>
+                    <div class="skeleton-circle"></div>
+                    <div class="skeleton-text-short"></div>
+                    <div class="skeleton-text"></div>
                 </div>
             </section>
 
@@ -106,9 +130,13 @@
                             <span class="chip">Soil testing guide</span>
                         </div>
                         <form id="chat-form">
-                            <button type="button" class="icon-btn voice-btn" title="Voice Input">🎤</button>
+                            <button type="button" class="icon-btn voice-btn" title="Voice Input">
+                                <i data-lucide="mic"></i>
+                            </button>
                             <input type="text" id="user-input" placeholder="Type your farming question here..." autocomplete="off">
-                            <button type="submit" class="send-btn" title="Send">➔</button>
+                            <button type="submit" class="send-btn" title="Send">
+                                <i data-lucide="send-horizontal"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -127,11 +155,13 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p>"Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth."</p>
+                    <blockquote class="footer-quote">
+                        "Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth."
+                    </blockquote>
                     <div class="social-icons">
-                        <span title="Mobile App">📱</span> 
-                        <span title="Website">🌐</span> 
-                        <span title="Email">✉️</span>
+                        <span title="Mobile App"><i data-lucide="smartphone"></i></span> 
+                        <span title="Website"><i data-lucide="globe"></i></span> 
+                        <span title="Email"><i data-lucide="mail"></i></span>
                     </div>
                 </div>
             </footer>

@@ -1,51 +1,53 @@
 import os
+import time
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def get_ai_response(user_message, language="en"):
     api_key = os.getenv("GEMINI_API_KEY")
 
     if not api_key:
-        return "Error: GEMINI_API_KEY not found."
+        return "GEMINI_API_KEY not found."
 
-    try:
-        client = genai.Client(api_key=api_key)
+    client = genai.Client(api_key=api_key)
 
-        system_prompt = (
-            "You are Smart Farmer AI, a helpful agriculture assistant for Indian farmers. "
-            "Give short, practical, and easy-to-understand farming advice. "
-            f"You MUST respond ONLY in the language code: '{language}'."
-        )
+    system_prompt = (
+        "You are Smart Farmer AI, a helpful agriculture assistant for Indian farmers. "
+        "Give short, practical, and easy-to-understand farming advice. "
+        f"Respond only in language: {language}."
+    )
 
-        models_to_try = [
-            "gemini-2.5-flash",
-            "gemini-2.5-flash-lite",
-            "gemini-flash-latest",
-            "gemini-flash-lite-latest"
-        ]
-        last_error = None
-        
-        for model_name in models_to_try:
+    models = [
+        "gemini-2.5-flash",
+        "gemini-2.5-flash-lite",
+    ]
+
+    for model in models:
+        for attempt in range(3):
             try:
                 response = client.models.generate_content(
-                    model=model_name,
+                    model=model,
                     contents=user_message,
                     config=types.GenerateContentConfig(
                         system_instruction=system_prompt,
-                        temperature=0.7
-                    )
+                        temperature=0.7,
+                    ),
                 )
-                return response.text
-            except Exception as e:
-                print(f"Model {model_name} failed: {str(e)}")
-                last_error = e
-                
-        # If all models fail, raise the last exception
-        raise last_error
 
-    except Exception as e:
-        print("Gemini Error:", str(e))
-        return f"Error calling Gemini API: {str(e)}"
+                return response.text
+
+            except Exception as e:
+                error = str(e)
+                print(f"{model} Attempt {attempt+1}: {error}")
+
+                if "503" in error or "UNAVAILABLE" in error:
+                    time.sleep(2 ** attempt)
+                    continue
+
+                break
+
+    return "AI service is busy. Please try again in a few moments."

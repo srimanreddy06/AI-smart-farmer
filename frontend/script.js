@@ -4,7 +4,7 @@ const getApiUrl = () => {
         return 'http://127.0.0.1:5000/chat';
     }
     // Replace with your actual deployed Render/Railway backend service URL
-    return 'https://smart-farmer-backend.onrender.com/chat';
+    return 'https://ai-smart-farmer-yir3.onrender.com/chat';
 };
 
 const chatHistory = document.getElementById('chat-history');

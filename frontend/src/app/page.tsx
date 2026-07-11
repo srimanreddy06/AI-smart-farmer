@@ -144,7 +144,7 @@ export default function LandingPage() {
               <Sprout className="w-6 h-6 text-white" />
             </div>
             <span className="font-extrabold text-xl tracking-tight bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent dark:from-emerald-400 dark:to-emerald-300">
-              Smart Farmer <span className="font-light text-slate-500 dark:text-slate-400">AI</span>
+              Smart Farmer <span className="font-light text-slate-600 dark:text-slate-300">AI</span>
             </span>
           </Link>
 
@@ -249,7 +249,7 @@ export default function LandingPage() {
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-slate-500 dark:text-slate-400 mb-8 max-w-xl leading-relaxed">
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl leading-relaxed">
               Smart Farmer AI helps farmers increase productivity through AI-powered crop recommendations, disease detection, weather forecasting, fertilizer guidance, multilingual AI chat, and live market intelligence—all in one intelligent platform.
             </p>
 
@@ -283,7 +283,7 @@ export default function LandingPage() {
                 <div className="flex text-amber-500 font-bold items-center gap-0.5">
                   {[1, 2, 3, 4, 5].map((s) => <Star key={s} className="w-3.5 h-3.5 fill-current" />)}
                 </div>
-                <span className="text-slate-500 dark:text-slate-400">Trusted by 10,000+ Farmers across India</span>
+                <span className="text-slate-600 dark:text-slate-300 font-medium">Trusted by 10,000+ Farmers across India</span>
               </div>
             </div>
 
@@ -322,8 +322,8 @@ export default function LandingPage() {
                 <Sprout className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Soil Moisture</p>
-                <p className="text-sm font-extrabold text-emerald-600 dark:text-emerald-400">72% <span className="text-[9px] font-normal text-slate-400">Optimal</span></p>
+                <p className="text-[10px] text-slate-650 dark:text-slate-300 font-semibold">Soil Moisture</p>
+                <p className="text-sm font-extrabold text-emerald-600 dark:text-emerald-400">72% <span className="text-[9px] font-semibold text-slate-500 dark:text-slate-400">Optimal</span></p>
               </div>
             </motion.div>
 
@@ -336,7 +336,7 @@ export default function LandingPage() {
                 <LineChart className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Rice Mandi Rate</p>
+                <p className="text-[10px] text-slate-650 dark:text-slate-300 font-semibold">Rice Mandi Rate</p>
                 <p className="text-sm font-extrabold text-slate-700 dark:text-slate-200">₹2,450 <span className="text-[9px] text-emerald-500 font-semibold">+4.2%</span></p>
               </div>
             </motion.div>
@@ -350,7 +350,7 @@ export default function LandingPage() {
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <div>
-                <p className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">Crop Diagnostics</p>
+                <p className="text-[10px] text-slate-650 dark:text-slate-300 font-semibold">Crop Diagnostics</p>
                 <p className="text-sm font-extrabold text-emerald-600 dark:text-emerald-400">No Infections</p>
               </div>
             </motion.div>
@@ -364,10 +364,10 @@ export default function LandingPage() {
                 <CloudSun className="w-8 h-8 text-amber-500 animate-pulse" />
                 <div>
                   <p className="text-sm font-extrabold text-slate-700 dark:text-slate-200">28°C</p>
-                  <p className="text-[9px] text-slate-500 dark:text-slate-400">Partly Cloudy</p>
+                  <p className="text-[9px] text-slate-650 dark:text-slate-300 font-semibold">Partly Cloudy</p>
                 </div>
               </div>
-              <div className="mt-2 border-t border-slate-200/50 dark:border-emerald-950/40 pt-1.5 flex gap-3 text-[8px] font-semibold text-slate-400">
+              <div className="mt-2 border-t border-slate-200/50 dark:border-emerald-950/40 pt-1.5 flex gap-3 text-[8px] font-bold text-slate-600 dark:text-slate-400">
                 <span>Humidity: 65%</span>
                 <span>Rain: 12%</span>
               </div>
@@ -383,7 +383,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
             <h2 className="text-xs font-bold uppercase tracking-widest text-emerald-600 dark:text-emerald-400">Core Foundations</h2>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">Engineered for rural connectivity, accessibility, and high performance</p>
+            <p className="text-slate-600 dark:text-slate-300 text-sm mt-1 font-semibold">Engineered for rural connectivity, accessibility, and high performance</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -391,31 +391,31 @@ export default function LandingPage() {
             <div className="glass p-5 rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200/40 dark:border-emerald-950/30">
               <Zap className="w-6 h-6 text-emerald-500 mb-3" />
               <h3 className="text-sm font-bold">Instant Answers</h3>
-              <p className="text-[10px] text-slate-400 mt-1">24/7 AI response speeds</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">24/7 AI response speeds</p>
             </div>
 
             <div className="glass p-5 rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200/40 dark:border-emerald-950/30">
               <Globe className="w-6 h-6 text-emerald-500 mb-3" />
               <h3 className="text-sm font-bold">5+ Languages</h3>
-              <p className="text-[10px] text-slate-400 mt-1">Regional script chat</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">Regional script chat</p>
             </div>
 
             <div className="glass p-5 rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200/40 dark:border-emerald-950/30">
               <ShieldCheck className="w-6 h-6 text-emerald-500 mb-3" />
               <h3 className="text-sm font-bold">Safe & Encrypted</h3>
-              <p className="text-[10px] text-slate-400 mt-1">Secure local farming data</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">Secure local farming data</p>
             </div>
 
             <div className="glass p-5 rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200/40 dark:border-emerald-950/30">
               <Smartphone className="w-6 h-6 text-emerald-500 mb-3" />
               <h3 className="text-sm font-bold">Works Everywhere</h3>
-              <p className="text-[10px] text-slate-400 mt-1">Lightweight on low net</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">Lightweight on low net</p>
             </div>
 
             <div className="col-span-2 md:col-span-1 glass p-5 rounded-2xl flex flex-col items-center justify-center text-center border border-slate-200/40 dark:border-emerald-950/30">
               <Users className="w-6 h-6 text-emerald-500 mb-3" />
               <h3 className="text-sm font-bold">10k+ Farmers</h3>
-              <p className="text-[10px] text-slate-400 mt-1">Verified user community</p>
+              <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">Verified user community</p>
             </div>
 
           </div>
@@ -429,7 +429,7 @@ export default function LandingPage() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Core Solutions</h2>
           <h3 className="text-3xl sm:text-4xl font-extrabold mb-4">Everything You Need To Grow Better</h3>
-          <p className="text-slate-500 dark:text-slate-400">
+          <p className="text-slate-600 dark:text-slate-300 text-sm font-medium">
             Smart agriculture tools powered by cutting-edge deep learning models, local weather stations, and crop intelligence databases.
           </p>
         </div>
@@ -454,7 +454,7 @@ export default function LandingPage() {
               <h4 className="text-xl font-bold mb-3 text-slate-800 dark:text-slate-100">{feat.title}</h4>
 
               {/* Card Description */}
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">{feat.desc}</p>
+              <p className="text-slate-605 dark:text-slate-350 text-sm leading-relaxed">{feat.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -468,7 +468,7 @@ export default function LandingPage() {
           <div className="text-center max-w-2xl mx-auto mb-20">
             <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Simplicity First</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold mb-4">How It Works</h3>
-            <p className="text-slate-500 dark:text-slate-400">
+            <p className="text-slate-600 dark:text-slate-300 text-sm font-medium">
               An intuitive interface designed to get farmers direct agricultural advice in seconds.
             </p>
           </div>
@@ -484,7 +484,7 @@ export default function LandingPage() {
                 1
               </div>
               <h4 className="text-lg font-bold mt-6 mb-2">Ask Your Question</h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Type or speak your farming query in your regional script.</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300 max-w-[200px] font-semibold">Type or speak your farming query in your regional script.</p>
             </div>
 
             {/* Step 2 */}
@@ -493,7 +493,7 @@ export default function LandingPage() {
                 2
               </div>
               <h4 className="text-lg font-bold mt-6 mb-2">AI Understands</h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Smart Farmer AI models process soil context and crop stages.</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300 max-w-[200px] font-semibold">Smart Farmer AI models process soil context and crop stages.</p>
             </div>
 
             {/* Step 3 */}
@@ -502,7 +502,7 @@ export default function LandingPage() {
                 3
               </div>
               <h4 className="text-lg font-bold mt-6 mb-2">Instant Smart Advice</h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Receive immediate suggestions, dosages, and organic fixes.</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300 max-w-[200px] font-semibold">Receive immediate suggestions, dosages, and organic fixes.</p>
             </div>
 
             {/* Step 4 */}
@@ -511,7 +511,7 @@ export default function LandingPage() {
                 4
               </div>
               <h4 className="text-lg font-bold mt-6 mb-2">Improve Crop Yield</h4>
-              <p className="text-xs text-slate-500 dark:text-slate-400 max-w-[200px]">Implement tips to harvest healthy yields and secure profits.</p>
+              <p className="text-xs text-slate-600 dark:text-slate-300 max-w-[200px] font-semibold">Implement tips to harvest healthy yields and secure profits.</p>
             </div>
 
           </div>
@@ -526,7 +526,7 @@ export default function LandingPage() {
           <div className="lg:col-span-5 text-left">
             <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Data-Driven Success</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold mb-6">Empowering Farmers with Accurate AI Models</h3>
-            <p className="text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
               Farming is a precise science. Our platforms integrate data science with practical agronomic wisdom to help you avoid seed loss, control disease outbreaks, and maximize fertilizer efficiency.
             </p>
             <Link 
@@ -542,7 +542,7 @@ export default function LandingPage() {
               <div key={i} className="glass p-8 rounded-3xl border border-slate-200/50 dark:border-emerald-950/40 shadow-sm text-left">
                 <h4 className="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 mb-2">{stat.value}</h4>
                 <p className="text-md font-bold mb-1">{stat.label}</p>
-                <p className="text-xs text-slate-400 leading-normal">{stat.desc}</p>
+                <p className="text-xs text-slate-600 dark:text-slate-400 leading-normal">{stat.desc}</p>
               </div>
             ))}
           </div>
@@ -557,7 +557,7 @@ export default function LandingPage() {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Interactive Preview</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold mb-4">Explore the App Interface</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">
+            <p className="text-slate-650 dark:text-slate-300 text-sm font-semibold">
               Click the tabs below to preview the core dashboards Indian farmers use to interact with our system.
             </p>
           </div>
@@ -587,7 +587,7 @@ export default function LandingPage() {
               <span className="w-3 h-3 rounded-full bg-red-400"></span>
               <span className="w-3 h-3 rounded-full bg-yellow-400"></span>
               <span className="w-3 h-3 rounded-full bg-green-400"></span>
-              <span className="text-[10px] text-slate-400 ml-4 font-mono select-none">https://smartfarmer.ai/app/dashboard</span>
+              <span className="text-[10px] text-slate-600 dark:text-slate-400 ml-4 font-mono select-none">https://smartfarmer.ai/app/dashboard</span>
             </div>
 
             <div className="bg-slate-50 dark:bg-[#070c08] rounded-2xl p-6 min-h-[380px] flex flex-col justify-between">
@@ -623,15 +623,15 @@ export default function LandingPage() {
                     <div className="relative border-2 border-dashed border-emerald-600/30 rounded-2xl p-4 flex flex-col items-center justify-center text-center bg-emerald-500/5">
                       <Bug className="w-10 h-10 text-emerald-500 mb-2 animate-bounce" />
                       <p className="text-xs font-bold">leaf_diagnose_92.png</p>
-                      <p className="text-[10px] text-slate-400 mt-1">Uploaded via smartphone camera</p>
+                      <p className="text-[10px] text-slate-600 dark:text-slate-400 mt-1 font-semibold">Uploaded via smartphone camera</p>
                     </div>
                     <div className="flex flex-col justify-center">
                       <span className="px-2 py-0.5 self-start text-[9px] font-bold bg-red-100 dark:bg-red-950/50 text-red-700 dark:text-red-400 rounded-full border border-red-200/30 mb-2">Infection Detected</span>
                       <h4 className="text-md font-bold mb-1">Rice Leaf Blight</h4>
-                      <p className="text-xs text-slate-400 leading-normal mb-3">Diagnostic confidence: 97.4%</p>
+                      <p className="text-xs text-slate-600 dark:text-slate-400 leading-normal mb-3 font-semibold">Diagnostic confidence: 97.4%</p>
                       <div className="p-3 bg-slate-100 dark:bg-emerald-950/20 border border-slate-200/30 dark:border-emerald-950/40 rounded-xl">
                         <p className="text-[10px] font-extrabold text-emerald-600 mb-1">Recommended Action</p>
-                        <p className="text-[11px] text-slate-500 dark:text-slate-400">Spray copper hydroxide formulation, or apply organic neem seed oil extract to prevent fungal spread.</p>
+                        <p className="text-[11px] text-slate-600 dark:text-slate-300 font-semibold">Spray copper hydroxide formulation, or apply organic neem seed oil extract to prevent fungal spread.</p>
                       </div>
                     </div>
                   </div>
@@ -649,22 +649,22 @@ export default function LandingPage() {
                   </div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl">
-                      <p className="text-[10px] text-slate-400 font-medium">Temperature</p>
+                      <p className="text-[10px] text-slate-600 dark:text-slate-400 font-bold">Temperature</p>
                       <p className="text-xl font-bold text-slate-700 dark:text-slate-200">29.4°C</p>
                       <p className="text-[8px] text-emerald-500 mt-1 font-semibold">Normal for Wheat</p>
                     </div>
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl">
-                      <p className="text-[10px] text-slate-400 font-medium">Precipitation</p>
+                      <p className="text-[10px] text-slate-600 dark:text-slate-400 font-bold">Precipitation</p>
                       <p className="text-xl font-bold text-slate-700 dark:text-slate-200">12%</p>
                       <p className="text-[8px] text-slate-400 mt-1 font-semibold">No rain expected</p>
                     </div>
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl">
-                      <p className="text-[10px] text-slate-400 font-medium">Wind Speed</p>
+                      <p className="text-[10px] text-slate-600 dark:text-slate-400 font-bold">Wind Speed</p>
                       <p className="text-xl font-bold text-slate-700 dark:text-slate-200">14 km/h</p>
                       <p className="text-[8px] text-emerald-500 mt-1 font-semibold">Good for spraying</p>
                     </div>
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl">
-                      <p className="text-[10px] text-slate-400 font-medium">Soil Moisture</p>
+                      <p className="text-[10px] text-slate-600 dark:text-slate-400 font-bold">Soil Moisture</p>
                       <p className="text-xl font-bold text-slate-700 dark:text-slate-200">68%</p>
                       <p className="text-[8px] text-amber-500 mt-1 font-semibold">Irrigate in 2 days</p>
                     </div>
@@ -679,12 +679,12 @@ export default function LandingPage() {
                       <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white"><LineChart className="w-4 h-4" /></div>
                       <span className="font-bold text-sm">Live Agricultural Mandi Index</span>
                     </div>
-                    <span className="text-[9px] text-slate-400">Updated 10m ago</span>
+                    <span className="text-[9px] text-slate-500 dark:text-slate-400 font-medium">Updated 10m ago</span>
                   </div>
                   <div className="overflow-x-auto mt-4">
                     <table className="w-full text-xs">
                       <thead>
-                        <tr className="border-b border-slate-200/40 dark:border-emerald-950/30 text-slate-400">
+                        <tr className="border-b border-slate-200/40 dark:border-emerald-950/30 text-slate-650 dark:text-slate-350 font-bold">
                           <th className="py-2 text-left">Crop</th>
                           <th className="py-2 text-left">Location (Mandi)</th>
                           <th className="py-2 text-right">Price per Quintal</th>
@@ -694,19 +694,19 @@ export default function LandingPage() {
                       <tbody>
                         <tr className="border-b border-slate-200/10 dark:border-emerald-950/10">
                           <td className="py-2 font-bold">Rice (Basmati)</td>
-                          <td className="py-2 text-slate-400">Karnal, Haryana</td>
+                          <td className="py-2 text-slate-600 dark:text-slate-400 font-semibold">Karnal, Haryana</td>
                           <td className="py-2 text-right font-bold">₹2,450</td>
                           <td className="py-2 text-right text-emerald-500 font-semibold">+4.2%</td>
                         </tr>
                         <tr className="border-b border-slate-200/10 dark:border-emerald-950/10">
                           <td className="py-2 font-bold">Cotton (Long Staple)</td>
-                          <td className="py-2 text-slate-400">Adilabad, Telangana</td>
+                          <td className="py-2 text-slate-600 dark:text-slate-400 font-semibold">Adilabad, Telangana</td>
                           <td className="py-2 text-right font-bold">₹6,850</td>
                           <td className="py-2 text-right text-emerald-500 font-semibold">+1.8%</td>
                         </tr>
                         <tr>
                           <td className="py-2 font-bold">Wheat (Kalyan)</td>
-                          <td className="py-2 text-slate-400">Bhatinda, Punjab</td>
+                          <td className="py-2 text-slate-600 dark:text-slate-400 font-semibold">Bhatinda, Punjab</td>
                           <td className="py-2 text-right font-bold">₹2,120</td>
                           <td className="py-2 text-right text-red-500 font-semibold">-0.5%</td>
                         </tr>
@@ -724,26 +724,26 @@ export default function LandingPage() {
                   </div>
                   <div className="grid md:grid-cols-3 gap-4 mt-6">
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl flex flex-col justify-between">
-                      <p className="text-[10px] text-slate-400 font-medium">Estimated Yield</p>
+                      <p className="text-[10px] text-slate-650 dark:text-slate-400 font-bold">Estimated Yield</p>
                       <h4 className="text-xl font-extrabold text-slate-700 dark:text-slate-200 mt-2">+28%</h4>
-                      <p className="text-[8px] text-emerald-500 mt-1">Compared to last season</p>
+                      <p className="text-[8px] text-emerald-500 mt-1 font-semibold">Compared to last season</p>
                     </div>
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl flex flex-col justify-between">
-                      <p className="text-[10px] text-slate-400 font-medium">Water Saved</p>
+                      <p className="text-[10px] text-slate-650 dark:text-slate-400 font-bold">Water Saved</p>
                       <h4 className="text-xl font-extrabold text-slate-700 dark:text-slate-200 mt-2">45,000L</h4>
-                      <p className="text-[8px] text-emerald-500 mt-1">Via drip irrigation alerts</p>
+                      <p className="text-[8px] text-emerald-500 mt-1 font-semibold">Via drip irrigation alerts</p>
                     </div>
                     <div className="p-4 bg-white dark:bg-emerald-950/20 border border-slate-200/20 dark:border-emerald-950/40 rounded-2xl flex flex-col justify-between">
-                      <p className="text-[10px] text-slate-400 font-medium">Disease Mitigation</p>
+                      <p className="text-[10px] text-slate-650 dark:text-slate-400 font-bold">Disease Mitigation</p>
                       <h4 className="text-xl font-extrabold text-slate-700 dark:text-slate-200 mt-2">100%</h4>
-                      <p className="text-[8px] text-slate-400 mt-1">Zero crop loss reported</p>
+                      <p className="text-[8px] text-slate-500 dark:text-slate-450 mt-1 font-medium">Zero crop loss reported</p>
                     </div>
                   </div>
                 </div>
               )}
 
               {/* Promo link footer in mockup */}
-              <div className="mt-6 pt-3 border-t border-slate-200/40 dark:border-emerald-950/30 flex justify-between items-center text-[10px] text-slate-400">
+              <div className="mt-6 pt-3 border-t border-slate-200/40 dark:border-emerald-950/30 flex justify-between items-center text-[10px] text-slate-600 dark:text-slate-400 font-semibold">
                 <span>Smart Farmer AI Suite</span>
                 <Link href="/chat" className="text-emerald-600 hover:text-emerald-500 font-bold flex items-center gap-1">Open Interactive App <ArrowUpRight className="w-3.5 h-3.5" /></Link>
               </div>
@@ -760,7 +760,7 @@ export default function LandingPage() {
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Farmer Feedback</h2>
           <h3 className="text-3xl sm:text-4xl font-extrabold mb-4">Loved by 10,000+ Farmers</h3>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">
+          <p className="text-slate-600 dark:text-slate-300 text-sm font-medium">
             Read how Smart Farmer AI has impacted agricultural production across Indian states.
           </p>
         </div>
@@ -772,7 +772,7 @@ export default function LandingPage() {
               <div className="flex text-amber-500 font-bold mb-4 gap-0.5">
                 {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
               </div>
-              <p className="text-sm italic leading-relaxed mb-6">
+              <p className="text-sm italic leading-relaxed mb-6 font-medium">
                 "The leaf image diagnosis saved my tomato field from early blight. I uploaded a picture, got organic remedy suggestions, and fixed it within 3 days without expensive chemical sprays."
               </p>
             </div>
@@ -782,7 +782,7 @@ export default function LandingPage() {
               </div>
               <div className="text-left">
                 <h4 className="text-xs font-bold">Ramesh Reddy</h4>
-                <p className="text-[10px] text-slate-400">Tomato Farmer, Guntur, AP</p>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-semibold">Tomato Farmer, Guntur, AP</p>
               </div>
             </div>
           </div>
@@ -792,7 +792,7 @@ export default function LandingPage() {
               <div className="flex text-amber-500 font-bold mb-4 gap-0.5">
                 {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
               </div>
-              <p className="text-sm italic leading-relaxed mb-6">
+              <p className="text-sm italic leading-relaxed mb-6 font-medium">
                 "The chatbot answers in Hindi perfectly. I asked about rice fertilizer rates, and the AI structured it split-wise for my acreage. Very simple to understand."
               </p>
             </div>
@@ -802,7 +802,7 @@ export default function LandingPage() {
               </div>
               <div className="text-left">
                 <h4 className="text-xs font-bold">Harpreet Singh</h4>
-                <p className="text-[10px] text-slate-400">Rice Farmer, Bhatinda, Punjab</p>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-semibold">Rice Farmer, Bhatinda, Punjab</p>
               </div>
             </div>
           </div>
@@ -812,7 +812,7 @@ export default function LandingPage() {
               <div className="flex text-amber-500 font-bold mb-4 gap-0.5">
                 {[1,2,3,4,5].map(s => <Star key={s} className="w-4 h-4 fill-current" />)}
               </div>
-              <p className="text-sm italic leading-relaxed mb-6">
+              <p className="text-sm italic leading-relaxed mb-6 font-medium">
                 "Finding Mandi rates daily was tough, but now I get wholesale prices for rice and wheat across neighboring markets directly on WhatsApp and SMS. Great service!"
               </p>
             </div>
@@ -822,7 +822,7 @@ export default function LandingPage() {
               </div>
               <div className="text-left">
                 <h4 className="text-xs font-bold">Suresh Patil</h4>
-                <p className="text-[10px] text-slate-400">Wheat Farmer, Pune, MH</p>
+                <p className="text-[10px] text-slate-600 dark:text-slate-400 font-semibold">Wheat Farmer, Pune, MH</p>
               </div>
             </div>
           </div>
@@ -837,7 +837,7 @@ export default function LandingPage() {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-emerald-600 dark:text-emerald-400 text-sm font-extrabold uppercase tracking-wider mb-2">Answers to Common Questions</h2>
             <h3 className="text-3xl sm:text-4xl font-extrabold mb-4">Frequently Asked Questions</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm">
+            <p className="text-slate-605 dark:text-slate-300 text-sm font-semibold">
               Have questions? Find quick answers about operations, accuracy, and support details.
             </p>
           </div>
@@ -868,7 +868,7 @@ export default function LandingPage() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 text-sm text-slate-500 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-emerald-950/10 pt-4">
+                      <div className="px-6 pb-6 text-sm text-slate-650 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-emerald-950/10 pt-4 font-semibold">
                         {faq.a}
                       </div>
                     </motion.div>
@@ -895,7 +895,7 @@ export default function LandingPage() {
             <h3 className="text-3xl sm:text-4xl sm:leading-tight font-extrabold text-white mb-4">
               Ready to Farm Smarter?
             </h3>
-            <p className="text-md text-emerald-100/80 mb-8 max-w-lg">
+            <p className="text-md text-emerald-100/90 mb-8 max-w-lg font-semibold">
               Join thousands of farmers across India using Smart Farmer AI every day to secure crop yields and increase profits.
             </p>
             <Link 
@@ -922,7 +922,7 @@ export default function LandingPage() {
                 Smart Farmer AI
               </span>
             </div>
-            <p className="text-sm text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed mb-6">
+            <p className="text-sm text-slate-650 dark:text-slate-300 max-w-sm leading-relaxed mb-6 font-semibold animate-pulse-none">
               AI-powered agriculture platform for modern Indian farmers, providing localized recommendations, crop diagnostics, and live mandi insights.
             </p>
           </div>
@@ -930,7 +930,7 @@ export default function LandingPage() {
           {/* Links Quick */}
           <div>
             <h4 className="font-bold text-sm text-emerald-700 dark:text-emerald-400 mb-4">Platform</h4>
-            <div className="flex flex-col gap-2.5 text-xs text-slate-500 dark:text-slate-400">
+            <div className="flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300 font-bold">
               <a href="#features" className="hover:text-emerald-600 transition-colors">Features</a>
               <a href="#how-it-works" className="hover:text-emerald-600 transition-colors">How It Works</a>
               <a href="#why-choose-us" className="hover:text-emerald-600 transition-colors">Why Choose Us</a>
@@ -941,10 +941,10 @@ export default function LandingPage() {
           {/* Contact Details */}
           <div>
             <h4 className="font-bold text-sm text-emerald-700 dark:text-emerald-400 mb-4">Contact Support</h4>
-            <div className="flex flex-col gap-2.5 text-xs text-slate-500 dark:text-slate-400">
-              <span className="flex items-center gap-2"><Mail className="w-3.5 h-3.5" /> support@smartfarmer.ai</span>
-              <span className="flex items-center gap-2"><Smartphone className="w-3.5 h-3.5" /> +91 98765 43210</span>
-              <span className="flex items-center gap-2"><Globe className="w-3.5 h-3.5" /> www.smartfarmer.ai</span>
+            <div className="flex flex-col gap-2.5 text-xs text-slate-650 dark:text-slate-300 font-bold">
+              <span className="flex items-center gap-2"><Mail className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> support@smartfarmer.ai</span>
+              <span className="flex items-center gap-2"><Smartphone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> +91 98765 43210</span>
+              <span className="flex items-center gap-2"><Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> www.smartfarmer.ai</span>
             </div>
           </div>
 
@@ -952,11 +952,11 @@ export default function LandingPage() {
 
         {/* Footer Bottom Quote & Copyright */}
         <div className="max-w-7xl mx-auto border-t border-slate-200/50 dark:border-emerald-950/40 pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <blockquote className="text-xs italic text-slate-400 font-serif max-w-md text-center md:text-left leading-normal border-l-2 border-emerald-500/50 pl-3">
+          <blockquote className="text-xs italic text-slate-650 dark:text-slate-400 font-serif max-w-md text-center md:text-left leading-normal border-l-2 border-emerald-500/50 pl-3">
             "Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals, and happiness."
           </blockquote>
           <div className="text-center md:text-right">
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-650 dark:text-slate-350 font-bold">
               © 2026 Smart Farmer AI. Made with ❤️ for Indian Farmers.
             </p>
           </div>

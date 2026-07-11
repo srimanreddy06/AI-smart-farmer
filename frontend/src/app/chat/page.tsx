@@ -256,8 +256,8 @@ export default function ChatPage() {
 
           {/* Crop Categories */}
           <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Crop Categories</h3>
-            <ul className="flex flex-col gap-1 text-sm font-semibold">
+            <h3 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-3">Crop Categories</h3>
+            <ul className="flex flex-col gap-1 text-sm font-bold">
               {['Kharif Crops', 'Rabi Crops', 'Zaid Crops', 'Cash Crops'].map((category) => (
                 <li 
                   key={category}
@@ -276,7 +276,7 @@ export default function ChatPage() {
 
           {/* Language Selection Grid */}
           <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">System Language</h3>
+            <h3 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-3">System Language</h3>
             <div className="grid grid-cols-2 gap-2">
               {[
                 { code: 'en', label: '🇺🇸 EN' },
@@ -307,15 +307,15 @@ export default function ChatPage() {
             <h4 className="text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1.5 mb-2">
               <Lightbulb className="w-4 h-4 text-amber-500 fill-amber-500/20" /> Daily Tip
             </h4>
-            <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed font-medium">
+            <p className="text-xs text-slate-650 dark:text-slate-350 leading-relaxed font-semibold">
               Rotate wheat crops with legumes like chickpeas to naturally enrich soil nitrogen levels.
             </p>
           </div>
 
           {/* Recent History */}
           <div>
-            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Recent Chats</h3>
-            <ul className="flex flex-col gap-1 text-xs text-slate-500 dark:text-slate-400 font-medium">
+            <h3 className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-2">Recent Chats</h3>
+            <ul className="flex flex-col gap-1 text-xs text-slate-600 dark:text-slate-300 font-semibold">
               {['Wheat fertilizer needs', 'Pest control for cotton'].map((hist) => (
                 <li 
                   key={hist}
@@ -412,8 +412,8 @@ export default function ChatPage() {
                 
                 {/* Timestamp */}
                 {msg.time && (
-                  <div className={`text-[9px] mt-1.5 flex items-center justify-end gap-1 opacity-70 select-none ${
-                    msg.sender === 'user' ? 'text-white/80 dark:text-[#060a07]/80' : 'text-slate-400'
+                  <div className={`text-[9px] mt-1.5 flex items-center justify-end gap-1 opacity-80 select-none ${
+                    msg.sender === 'user' ? 'text-white/90 dark:text-[#060a07]/90' : 'text-slate-500 dark:text-slate-400 font-medium'
                   }`}>
                     <Clock className="w-2.5 h-2.5" />
                     {msg.time}
@@ -427,7 +427,7 @@ export default function ChatPage() {
           {loading && (
             <div className="flex max-w-[80%] flex-col self-start">
               <div className="p-4 bg-white dark:bg-emerald-950/30 border border-slate-200/40 dark:border-emerald-950/30 rounded-2xl rounded-tl-sm shadow-sm flex flex-col gap-1.5">
-                <span className="text-[10px] text-slate-400 font-semibold">Smart Farmer AI is writing...</span>
+                <span className="text-[10px] text-slate-500 dark:text-slate-400 font-bold">Smart Farmer AI is writing...</span>
                 <div className="flex gap-1.5 items-center justify-start py-1">
                   <div className="w-2 h-2 rounded-full bg-emerald-600 typing-dot"></div>
                   <div className="w-2 h-2 rounded-full bg-emerald-600 typing-dot"></div>
@@ -468,7 +468,7 @@ export default function ChatPage() {
               <button 
                 type="button" 
                 title="Voice Input (Upcoming)"
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-slate-200 dark:hover:bg-emerald-950/30 text-slate-400 hover:text-emerald-600 transition-colors shrink-0"
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-slate-200 dark:hover:bg-emerald-950/30 text-slate-500 dark:text-slate-400 hover:text-emerald-600 transition-colors shrink-0"
               >
                 <Mic className="w-5 h-5" />
               </button>
@@ -478,14 +478,14 @@ export default function ChatPage() {
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 placeholder="Ask about fertilizer, pests, crops, seeds..." 
-                className="flex-1 bg-transparent border-none outline-none text-sm placeholder-slate-400"
+                className="flex-1 bg-transparent border-none outline-none text-sm placeholder-slate-500 dark:placeholder-slate-400"
               />
 
               <button 
                 type="submit" 
                 title="Send Message"
                 disabled={!userInput.trim() || loading}
-                className="w-10 h-10 rounded-full flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-200 dark:disabled:bg-emerald-950/20 text-white disabled:text-slate-400 hover:scale-105 active:scale-95 transition-all shrink-0 shadow-lg shadow-emerald-600/10"
+                className="w-10 h-10 rounded-full flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 disabled:bg-slate-200 dark:disabled:bg-emerald-950/20 text-white disabled:text-slate-500 hover:scale-105 active:scale-95 transition-all shrink-0 shadow-lg shadow-emerald-600/10"
               >
                 <SendHorizontal className="w-4.5 h-4.5" />
               </button>

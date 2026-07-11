@@ -31,6 +31,7 @@ smart-farmer-ai/
 │   ├── assets/            # Static assets (images, icons)
 │   └── components/        # Frontend components (placeholder for future use)
 │
+├── render.yaml            # Blueprint deployment configuration for Render
 └── README.md
 ```
 
@@ -71,17 +72,23 @@ For a better experience (to avoid strict local file cors policies), you can use 
 
 ## Deployment
 
-The application is structured for easy deployment to cloud services:
+The application is structured for easy monorepo deployment:
 
-### 1. Backend Deployment (Render / Railway)
-- **Start Command**: `gunicorn app:app` (defined in the `Procfile`).
-- **Environment Variables**: Add `GEMINI_API_KEY` to your service environment variables in the provider's dashboard.
-- **Root Directory**: `backend` (if deploying from a monorepo).
+### 1. Backend Deployment (Render)
+This project contains a `render.yaml` Blueprint file, which automates the setup.
+- **Deploy via Blueprint**: Create a new **Blueprint** on Render, connect your GitHub repo, and enter your `GEMINI_API_KEY` when prompted.
+- **Manual Setup**:
+  - **Service Type**: Web Service
+  - **Root Directory**: `backend`
+  - **Start Command**: `gunicorn app:app`
+  - **Environment Variables**: Add `GEMINI_API_KEY`
 
-### 2. Frontend Deployment (Vercel / Netlify / Render Static)
-- **Root/Publish Directory**: `frontend`.
-- **Build Command**: None (pure static site).
-- **API Configuration**: Update the deployed backend URL inside the `getApiUrl` function in [script.js](file:///c:/Users/srima/ai%20smart%20chatbot/frontend/script.js) to point to your live backend endpoint.
+Your live backend is hosted at: `https://ai-smart-farmer-yir3.onrender.com`
+
+### 2. Frontend Deployment (Vercel)
+- **Root Directory**: Set to `frontend` in your Vercel project settings (this is crucial since the HTML/CSS/JS resides there).
+- **Build/Output settings**: Leave as default (static site, no build command).
+- **Connection**: Point your script's API requests to your live Render backend service (already configured in `frontend/script.js`).
 
 ## Screenshots
 *(Add screenshots of the Light and Dark modes here)*
